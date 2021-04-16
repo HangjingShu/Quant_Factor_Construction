@@ -19,11 +19,6 @@ class EquFactorAf(Equ):
         self.bic = bic
         self.sb = sb
         self.ac = ac
-### bic: 将财报中的balance sheet, income statement, cash flow三张表的数据合并而成
-### sb: stock_basic, 股票进阶数据,如PE等
-### ac: 分析师预测数据
-### OHLC: 股票后复权数据，如每日收盘价、开盘价、最高点、最低点、换手率等
-### OHLC_qfq：股票前复权数据
 ### 未来可优化的点：使用SQL直接从数据库抓取stock_basic中的trade_date数据，并直接建表，可以避免每只股票重复读取sb表
 ### 尽量用矩阵代替for的遍历函数，但目前为止还未想出好的办法
 ### 有些reindex以及copy的指令冗余，未来可以进一步删除不必要的部分
